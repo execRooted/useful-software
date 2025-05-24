@@ -1,13 +1,14 @@
 import pyperclip
 import json
 import os
+import re
 
 os.system("title CLP Manager - by execRooted")
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(SCRIPT_DIR, "clipboard_history.json")
+MARKER_FILE = os.path.join(SCRIPT_DIR, "cleared.marker")
 
-MAX_ENTRIES_TO_SHOW = 10
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -18,14 +19,21 @@ def load_history():
                 return []
     return []
 
-def delete_history_file():
-    if os.path.exists(HISTORY_FILE):
-        os.remove(HISTORY_FILE)
-        print("\n✅ Clipboard history deleted.")
-    else:
-        print("\n No history file to delete.")
+def clear_history_contents():
+    with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
+        json.dump([], f)
+
+    # Clear clipboard
+    pyperclip.copy("")
+
+    # Create marker file
+    with open(MARKER_FILE, 'w') as marker:
+        marker.write("cleared")
+
+    print("\n✅ Clipboard history and clipboard content cleared.")
     input("Press Enter to exit...")
     exit()
+
 
 def show_history_menu(history):
     if not history:
@@ -34,13 +42,12 @@ def show_history_menu(history):
         return
 
     print("\n--- Clipboard History ---\n")
-    recent = history[-MAX_ENTRIES_TO_SHOW:]
-    for i, (timestamp, entry) in enumerate(reversed(recent), 1):
-        display = entry.replace("\n", " ")[:70]
+    for i, (timestamp, entry) in enumerate(reversed(history), 1):
+        display = re.sub(r'\s+', ' ', entry).strip()[:70]
         print(f"{i}. [{timestamp}] {display}{'...' if len(entry) > 70 else ''}")
 
-    delete_option_index = len(recent) + 1
-    print(f"{delete_option_index}. Delete clipboard history")
+    delete_option_index = len(history) + 1
+    print(f"{delete_option_index}. Clear clipboard history")
 
     print("\nSelect an entry to copy to clipboard.")
     choice = input(f"Choice (1–{delete_option_index} or Enter to cancel): ").strip()
@@ -51,14 +58,14 @@ def show_history_menu(history):
 
     if choice.isdigit():
         idx = int(choice)
-        if 1 <= idx <= len(recent):
-            selected_entry = recent[-idx][1]
+        if 1 <= idx <= len(history):
+            selected_entry = history[-idx][1]
             pyperclip.copy(selected_entry)
             print("Copied to clipboard.")
             input("Press Enter to exit...")
             return
         elif idx == delete_option_index:
-            delete_history_file()
+            clear_history_contents()
         else:
             print("Invalid choice.")
     else:
@@ -66,8 +73,7 @@ def show_history_menu(history):
 
     input("Press Enter to exit...")
 
+
 if __name__ == "__main__":
-    print("If you see this when the PC starts up, it's indicating that the program works normally :D")
-    print()
     history = load_history()
     show_history_menu(history)
