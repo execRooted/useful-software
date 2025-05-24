@@ -1,15 +1,15 @@
 # useful-software
 
- - A bunch of useful software that created and found useful in day-to-day activities, tested on windows:
+ - A bunch of useful software that I created or have and found useful in day-to-day activities, tested on windows:
 ------
-## clearBinOnShutdown.bat
+## clearBinOnShutdown.bat(created by me)
 
 - A lightweight .bat program that deletes your files from the recicle bin, waits a bit, then shuts down your PC
 - Useful when closing your PC
 
 ---
 
-## clp
+## clp(created by me)
 
 - A lightweight clipboard program, that monitors the clipboard, and saves it into a .json. To run it, press the clp_mon.pyw.
 - To run it automaticly on every start of the pc, open the task manager, then go to the startup folder. Right-click on any .exe, then copy clp_mon.pyw and clp.py in there.
@@ -46,7 +46,7 @@ Check inside the dist folder, there will be your .exe.
 
 * If there are python folders witought a requirements.txt file, that means that python comes preinstalled with the libraries, and you do not have to do anything.
 
-**I Will ocasionally update this repository, when i find other useful stuff**
+**I Will ocasionally update this repository, when I find or create other useful stuff**
 
 ------
 
