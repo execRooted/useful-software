@@ -14,30 +14,28 @@
 ## clp (created by me)
 
 - A lightweight clipboard manager that monitors your clipboard and saves entries into a JSON file named `clipboard_history.json`.
- 
-- To start monitoring, run `clp_mon.pyw`.
-  
-- To run automatically on startup, place both `clp_mon.pyw` and `clp.py` in your Startup folder. To get to it you have a tip down below: <br>
+
+- To install the program, download the .zip file, then put the clp folder somewhere in your computer. Then create a shortcut for clp_mon.pyw and place it into the startup folder. <br>
   *Quick tip:* Press windows + R to open the *run dialog* → type this command in: shell:startup → Copy the two files there. 
+
+- To start monitoring, restart your PC
   
-- While `clp_mon.pyw` is running, press **Ctrl + Alt + H** to open the clipboard history.
+- Press **Ctrl + Alt + H** to open the clipboard history.
   
-- To delete the clipboard history file (`clipboard_history.json`), choose the last option in `clp.py`.
+- To delete the clipboard history file (`clipboard_history.json`), choose the last option in `clp.py`, AKA the menu that shows up when you click **Ctrl + Alt + H**.
   
 - Useful for quick access to your clipboard history.
   
 - **Note:** I do not recommend converting these scripts to executables as some systems may not read the JSON file correctly.
   
-- Having the `clipboard_history.json` file in the Startup folder is safe — it won't open automatically like a text file if installed as described.
-  
-- The `.pyw` extension hides the console window for the monitoring script. For debugging, rename it to `.py` to see output messages.
+- The `.pyw` extension hides the console window for the monitoring script. For debugging, rename it to `.py` to see output messages in the console.
   
 - The JSON file is created automatically when you run `clp_mon.pyw` for the first time.
   
 - To stop the monitor, either restart your PC or use Task Manager to kill the process.
   *If it's in startup, it will restart automatically after login, so remove it from Startup if you want to stop it permanently.*
  
-- To uninstall, delete `clp.py`, `clp_mon.pyw`, and `clipboard_history.json` from the Startup folder, then restart your PC.
+- To uninstall, delete `clp.py`, `clp_mon.pyw`, and `clipboard_history.json` from your computer, after remove the shortcut from your startup folder, then restart your PC.
   
 - Don’t forget to install the requirements (see below).
 
