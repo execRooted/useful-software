@@ -12,12 +12,16 @@
 ## clp(created by me)
 
 - A lightweight clipboard program, that monitors the clipboard, and saves it into a .json. To run it, press the clp_mon.pyw.
-- To run it automaticly on every start of the pc, open the task manager, then go to the startup folder. Right-click on any .exe, then copy clp_mon.pyw and clp.py in there.
+- To run it automaticly on every start of the pc, put the clp_mon.pyw and clp.py in the startup folder. One easy way to find the folder is to open the task manager, then go to the startup tab. Right-click on any .exe, select open file location, then copy clp_mon.pyw and clp.py in the opened folder.
 - When the clp_mon.pyw is running, to see your clipboard history, press ctrl + alt + H.
 - To delete the .json and the history, press the last numbered option, when the cllp.py is running. 
 - Useful for accesing the clipboard.
 - I do not recommend to turn any of the files into executables. I found it that on some systems it does not read the .json correctly.
 - There is no problem with a .json beeing in the startup folder. It will not open it at startup as a txt file, if you insall it as i said, so I do not want you to yap in the comments about this aspect.
+- The extension .pyw is to hide the console of the monitoring program. For debuging purpuses, you can change it to clp_mon.py. I made it so, it tells you when clipboard activity has been detected, and at what time.
+- It automaticly creates the json file, when the clp_mon.pyw is activated.
+- To close the .pyw file, either restart the PC, or by task manager(if you have it on the startup, the restart option wont work, becouse it automaticly starts it up when you log into your account. Just remove the program from the startup folder, then restart your pc).
+- To dezinstall the program, delete the .py file, the .pyw file and the .json file from startup, then restart your pc.
 - Install the requirements.txt
 ------
 
