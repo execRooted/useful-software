@@ -44,7 +44,7 @@ Check inside the dist folder, there will be your .exe.
 
         pip install -r requirements.txt
 
-*If there are python folders witought a requirements.txt file, that means that python comes preinstalled with the libraries, and you do not have to do anything.
+* If there are python folders witought a requirements.txt file, that means that python comes preinstalled with the libraries, and you do not have to do anything.
 
 **I Will ocasionally update this repository, when i find other useful stuff**
 
