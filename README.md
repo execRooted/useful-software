@@ -17,8 +17,8 @@ A collection of useful software I created or found handy for day-to-day tasks. T
  
 - To start monitoring, run `clp_mon.pyw`.
   
-- To run automatically on startup, place both `clp_mon.pyw` and `clp.py` in your Startup folder. <br>
-  *Quick tip:* To get to the startup folder press windows + R to open the *run dialog* → type this command in: shell:startup → Copy the two files there. Done :)
+- To run automatically on startup, place both `clp_mon.pyw` and `clp.py` in your Startup folder. To get to it you have a tip down below <br>
+  *Quick tip:* Press windows + R to open the *run dialog* → type this command in: shell:startup → Copy the two files there. 
   
 - While `clp_mon.pyw` is running, press **Ctrl + Alt + H** to open the clipboard history.
   
