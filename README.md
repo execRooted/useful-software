@@ -1,6 +1,6 @@
 # useful-software
 
-A collection of useful software I created or found handy for day-to-day tasks. Tested on Windows.
+*A collection of useful software I created or found handy for day-to-day tasks. Tested on Windows.*
 
 ---
 
