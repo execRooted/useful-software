@@ -35,7 +35,6 @@ A collection of useful software I created or found handy for day-to-day tasks. T
 - The JSON file is created automatically when you run `clp_mon.pyw` for the first time.
   
 - To stop the monitor, either restart your PC or use Task Manager to kill the process.
-  
   *If it's in startup, it will restart automatically after login, so remove it from Startup if you want to stop it permanently.*
  
 - To uninstall, delete `clp.py`, `clp_mon.pyw`, and `clipboard_history.json` from the Startup folder, then restart your PC.
