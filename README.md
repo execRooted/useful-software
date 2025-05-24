@@ -33,8 +33,8 @@ The icon flag isnt necesary in the command below:
 
 	python -m PyInstaller --onefile --icon=theIcon.ico pythonFile.py
  
-** Make sure the icon is in the same directory as the Python file you want to turn into a executable.
- - I have included the file of my pfp in the main branch.
+**Make sure the icon is in the same directory as the Python file you want to turn into a executable.**
+ - I have included the file of my pfp in the main branch, as a .ico. (Named theIcon.ico).
 
 Check inside the dist folder, there will be your .exe.
 
