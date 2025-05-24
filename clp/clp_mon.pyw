@@ -9,7 +9,7 @@ import threading
 import subprocess
 import sys
 
-# Needed for CREATE_NEW_CONSOLE
+
 if os.name == 'nt':
     CREATE_NEW_CONSOLE = subprocess.CREATE_NEW_CONSOLE
 else:
@@ -68,11 +68,13 @@ def monitor_clipboard():
             break
 
 def launch_clp():
+    python_exe = sys.executable.replace("pythonw.exe", "python.exe")
     subprocess.Popen(
-        [sys.executable, "clp.py"],
+        [python_exe, "clp.py"],
         creationflags=subprocess.CREATE_NEW_CONSOLE,
         cwd=os.path.dirname(os.path.abspath(__file__))
     )
+
 
 def setup_hotkey():
     keyboard.add_hotkey("ctrl+alt+h", launch_clp)
@@ -81,8 +83,7 @@ if __name__ == "__main__":
     ensure_history_file()
     setup_hotkey()
 
-    # Run clipboard monitor in main thread
-    # and allow hotkeys to work by starting keyboard listener in background
+   
     keyboard_thread = threading.Thread(target=keyboard.wait, args=("esc",), daemon=True)
     keyboard_thread.start()
 
