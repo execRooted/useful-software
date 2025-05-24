@@ -21,6 +21,7 @@ else:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(SCRIPT_DIR, "clipboard_history.json")
 CLP_SCRIPT = os.path.join(SCRIPT_DIR, "clp.py")
+MARKER_FILE = os.path.join(SCRIPT_DIR, "cleared.marker")
 
 MAX_HISTORY = 50
 POLL_INTERVAL = 0.5
@@ -42,6 +43,8 @@ def save_history(history):
     with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
         json.dump(history, f, indent=2)
 
+
+
 def monitor_clipboard():
     history = load_history()
     known_entries = set(entry for _, entry in history)
@@ -51,6 +54,16 @@ def monitor_clipboard():
 
     while True:
         try:
+            
+            if os.path.exists(MARKER_FILE):
+                print("[Info] History cleared externally. Resetting memory.")
+                history = []
+                known_entries.clear()
+                last_clipboard = ""  
+
+                
+                os.remove(MARKER_FILE)
+
             current = pyperclip.paste()
             if current.strip() and current != last_clipboard and current not in known_entries:
                 last_clipboard = current
@@ -63,9 +76,12 @@ def monitor_clipboard():
                 save_history(history)
                 print(f"[{timestamp}] New clipboard entry saved.")
             time.sleep(POLL_INTERVAL)
+
         except KeyboardInterrupt:
             print("\nMonitor stopped.")
             break
+
+
 
 def launch_clp():
     python_exe = sys.executable.replace("pythonw.exe", "python.exe")
