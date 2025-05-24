@@ -1,59 +1,66 @@
 # useful-software
 
- - A bunch of useful software that I created or have and found useful in day-to-day activities, tested on windows:
-------
-## clearBinOnShutdown.bat(created by me)
-
-- A lightweight .bat program that deletes your files from the recicle bin, waits a bit, then shuts down your PC
-- Useful when closing your PC
+A collection of useful software I created or found handy for day-to-day tasks. Tested on Windows.
 
 ---
 
-## clp(created by me)
+## clearBinOnShutdown.bat (created by me)
 
-- A lightweight clipboard program, that monitors the clipboard, and saves it into a .json. To run it, press the clp_mon.pyw.
-- To run it automaticly on every start of the pc, put the clp_mon.pyw and clp.py in the startup folder. One easy way to find the folder is to open the task manager, then go to the startup tab. Right-click on any .exe, select open file location, then copy clp_mon.pyw and clp.py in the opened folder.
-- When the clp_mon.pyw is running, to see your clipboard history, press ctrl + alt + H.
-- To delete the .json and the history, press the last numbered option, when the cllp.py is running. 
-- Useful for accesing the clipboard.
-- I do not recommend to turn any of the files into executables. I found it that on some systems it does not read the .json correctly.
-- There is no problem with a .json beeing in the startup folder. It will not open it at startup as a txt file, if you insall it as i said, so I do not want you to yap in the comments about this aspect.
-- The extension .pyw is to hide the console of the monitoring program. For debuging purpuses, you can change it to clp_mon.py. I made it so, it tells you when clipboard activity has been detected, and at what time.
-- It automaticly creates the json file, when the clp_mon.pyw is activated.
-- To close the .pyw file, either restart the PC, or by task manager(if you have it on the startup, the restart option wont work, becouse it automaticly starts it up when you log into your account. Just remove the program from the startup folder, then restart your pc).
-- To dezinstall the program, delete the .py file, the .pyw file and the .json file from startup, then restart your pc.
-- Install the requirements.txt
-------
+- A lightweight batch script that empties your Recycle Bin, waits a moment, then shuts down your PC.
+- Useful for cleaning up when shutting down your computer.
 
-### How to turn a .py into a .exe with PyInstaller:
-- Have python & pip installed
-- Open cmd as adm and type:
+---
 
-  
-		pip install PyInstaller
+## clp (created by me)
 
-The icon flag isnt necesary in the command below: 
+- A lightweight clipboard manager that monitors your clipboard and saves entries into a JSON file named `clipboard_history.json`.
+- To start monitoring, run `clp_mon.pyw`.
+- To run automatically on startup, place both `clp_mon.pyw` and `clp.py` in your Startup folder.  
+  *Quick tip:* Open Task Manager → Startup tab → Right-click any program → Open file location, then copy the two files there.
+- While `clp_mon.pyw` is running, press **Ctrl + Alt + H** to open the clipboard history.
+- To delete the clipboard history file (`clipboard_history.json`), choose the last option in `clp.py`.
+- Useful for quick access to your clipboard history.
+- **Note:** I do not recommend converting these scripts to executables as some systems may not read the JSON file correctly.
+- Having the `clipboard_history.json` file in the Startup folder is safe — it won't open automatically like a text file if installed as described.
+- The `.pyw` extension hides the console window for the monitoring script. For debugging, rename it to `.py` to see output messages.
+- The JSON file is created automatically when you run `clp_mon.pyw` for the first time.
+- To stop the monitor, either restart your PC or use Task Manager to kill the process.  
+  *If it's in startup, it will restart automatically after login, so remove it from Startup if you want to stop it permanently.*
+- To uninstall, delete `clp.py`, `clp_mon.pyw`, and `clipboard_history.json` from the Startup folder, then restart your PC.
+- Don’t forget to install the requirements (see below).
 
+---
 
-	python -m PyInstaller --onefile --icon=theIcon.ico pythonFile.py
- 
-**Make sure the icon is in the same directory as the Python file you want to turn into a executable.**
- - I have included the file of my pfp in the main branch, as a .ico. (Named theIcon.ico).
+## How to convert a `.py` file into an `.exe` with PyInstaller
 
-Check inside the dist folder, there will be your .exe.
+1. Make sure Python and pip are installed.
+2. Open Command Prompt as Administrator and run:
 
-------
+        pip install PyInstaller
 
-### How to install the requirements.txt:
-  - Have python & pip installed
-  - Open CMD as adm and type:
+3. To create an executable with an icon (icon file should be in the same folder as the Python script):
+
+        python -m PyInstaller --onefile --icon=theIcon.ico pythonFile.py
+
+4. Your `.exe` will be inside the `dist` folder.
+
+*Note:* I included my profile picture as `theIcon.ico` in the main branch for you to use.
+
+---
+
+## How to install the requirements
+
+1. Make sure Python and pip are installed.
+2. Open Command Prompt as Administrator and run:
 
         pip install -r requirements.txt
 
-* If there are python folders witought a requirements.txt file, that means that python comes preinstalled with the libraries, and you do not have to do anything.
+*If some Python folders don’t have a `requirements.txt`, it means those libraries come pre-installed and no action is needed.*
 
-**I Will ocasionally update this repository, when I find or create other useful stuff**
+---
 
-------
+I will occasionally update this repository when I create or find new useful tools.
+
+---
 
 **Made by execRooted**
