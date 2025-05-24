@@ -28,9 +28,10 @@
   
 		pip install PyInstaller
 
-The icon flag isnt necesary. 
+The icon flag isnt necesary in the command below: 
 
-		python -m PyInstaller --onefile --icon=theIcon.ico pythonFile.py
+
+	python -m PyInstaller --onefile --icon=theIcon.ico pythonFile.p
 
 
 Check inside the dist folder, there will be your .exe.
