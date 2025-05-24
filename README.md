@@ -14,19 +14,32 @@ A collection of useful software I created or found handy for day-to-day tasks. T
 ## clp (created by me)
 
 - A lightweight clipboard manager that monitors your clipboard and saves entries into a JSON file named `clipboard_history.json`.
+ 
 - To start monitoring, run `clp_mon.pyw`.
-- To run automatically on startup, place both `clp_mon.pyw` and `clp.py` in your Startup folder.  
-  *Quick tip:* Open Task Manager → Startup tab → Right-click any program → Open file location, then copy the two files there.
+  
+- To run automatically on startup, place both `clp_mon.pyw` and `clp.py` in your Startup folder.
+  *Quick tip:* Press windows + R to open the *run dialog* → paste this command in: shell:startup → Copy the two files there. Done :)
+  
 - While `clp_mon.pyw` is running, press **Ctrl + Alt + H** to open the clipboard history.
+  
 - To delete the clipboard history file (`clipboard_history.json`), choose the last option in `clp.py`.
+  
 - Useful for quick access to your clipboard history.
+  
 - **Note:** I do not recommend converting these scripts to executables as some systems may not read the JSON file correctly.
+  
 - Having the `clipboard_history.json` file in the Startup folder is safe — it won't open automatically like a text file if installed as described.
+  
 - The `.pyw` extension hides the console window for the monitoring script. For debugging, rename it to `.py` to see output messages.
+  
 - The JSON file is created automatically when you run `clp_mon.pyw` for the first time.
-- To stop the monitor, either restart your PC or use Task Manager to kill the process.  
+  
+- To stop the monitor, either restart your PC or use Task Manager to kill the process.
+  
   *If it's in startup, it will restart automatically after login, so remove it from Startup if you want to stop it permanently.*
+ 
 - To uninstall, delete `clp.py`, `clp_mon.pyw`, and `clipboard_history.json` from the Startup folder, then restart your PC.
+  
 - Don’t forget to install the requirements (see below).
 
 ---
