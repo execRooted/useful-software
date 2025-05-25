@@ -92,6 +92,7 @@ After restarting, the program will automatically run in the background.
 ### Use the Program:
 
 - To open the control panel interface, press `Ctrl + Alt + P`.
+- To quit the program, make sure that the window is in focus (click on it) and press Q.
 - From there, you can interact with the buttons for system information, shutdown, restart, and network reset.
 
 
