@@ -15,8 +15,8 @@
 
 - A lightweight clipboard manager that monitors your clipboard and saves entries into a JSON file named `clipboard_history.json`.
 
-- To install the program, download the .zip file, put the clp folder somewhere in your computer and install the requirements.txt (visit the help section down below if you dont know how). Then create a shortcut for clp_mon.pyw and place it into the startup folder.<br>
-  --> *If you dont know how to get to the startup folder, visit the ***Help*** section down below*
+- To install the program, download the .zip file, put the clp folder somewhere in your computer and install the requirements.txt. Then create a shortcut for clp_mon.pyw and place it into the startup folder.<br>
+  --> *If you dont know how to get to the startup folder and/or install requirements.txt, visit the ***Help*** section down below*
 
 - To start monitoring, restart your PC
   
