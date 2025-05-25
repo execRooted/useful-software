@@ -14,6 +14,8 @@ from textual.containers import Horizontal, Vertical, Center
 from textual.widgets import Header, Footer, Static, Button
 from textual.reactive import reactive
 
+os.system("title ctrl_app - by execRooted")
+
 class DailyTools(Static):
     time = reactive("")
     date = reactive("")
@@ -245,7 +247,7 @@ class ControlPanel(Static):
            
             
                 
-class SystemDashboardApp(App):
+class ctrl_app(App):
     BINDINGS = [("q", "quit", "Exit")]
 
     CSS = """
@@ -326,4 +328,4 @@ class SystemDashboardApp(App):
 
 
 if __name__ == "__main__":
-    SystemDashboardApp().run()
+    ctrl_app().run()
