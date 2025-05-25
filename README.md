@@ -4,9 +4,9 @@
 
 ---
 
-## clearBinOnShutdown.bat (created by me)
+## clear.bat (created by me)
 
-- A lightweight batch script that empties your Recycle Bin, waits a moment, then shuts down your PC.
+- A lightweight batch script that empties your Recycle Bin and unused temp files, waits a moment, then shuts down your PC.
 - Useful for cleaning up when shutting down your computer.
 
 ---
