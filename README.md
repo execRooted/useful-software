@@ -40,11 +40,11 @@
 - Dont forget to install the requirements (see below).
 
 ---
-## ctrl_apps
+## ctrl_apps (created by me)
 
 The **ctrl_apps** program is a collection of useful tools that give you easy access to important system and network metrics, alongside functionality for quickly shutting down, restarting, or refreshing your system and network. It displays real-time system stats and offers one-click options for managing your PC.
 
-###Features
+### Features
 
 - **System Info:** View current system time, date, uptime, memory usage, disk usage, battery status, and more.
 - **System Monitoring:** Real-time monitoring of CPU, memory, disk usage, and boot time.
