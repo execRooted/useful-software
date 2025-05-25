@@ -104,7 +104,7 @@ After restarting, the program will automatically run in the background.
 
 ---
 
-#Help:
+# Help:
 
 ## How to convert a `.py` file into an `.exe` with PyInstaller
 
