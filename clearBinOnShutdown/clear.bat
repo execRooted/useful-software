@@ -2,9 +2,6 @@
 
 PowerShell.exe -NoProfile -Command "Clear-RecycleBin "
 
-echo Recycle Bin Cleared :)
-
-
 echo Deleating Temporary Files...
 
 
