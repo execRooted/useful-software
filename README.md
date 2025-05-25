@@ -16,7 +16,7 @@
 - A lightweight clipboard manager that monitors your clipboard and saves entries into a JSON file named `clipboard_history.json`.
 
 - To install the program, download the .zip file, then put the clp folder somewhere in your computer. Then create a shortcut for clp_mon.pyw and place it into the startup folder.<br>
-  *You have instructions on how to get to the startup folder down below*
+  *If you dont know how to get to the startup folder, visit the ***Help*** section down below*
 
 - To start monitoring, restart your PC
   
@@ -48,7 +48,7 @@ The **ctrl_apps** program is a collection of useful tools that give you easy acc
 
 - **System Info:** View current system time, date, uptime, memory usage, disk usage, battery status, and more.
 - **System Monitoring:** Real-time monitoring of CPU, memory, disk usage, and boot time.
-- **Network Monitoring:** Monitor your network activity, including IP address and real-time upload/download speeds.
+- **Network Monitoring:** Monitor your network activity, including IP address and real-time upload/download usage or speeds<br>(not a speedtest, just monitoring how fast a file is downlaoding).
 
 ### Actions:
 - **Shutdown & Clear Bin:** Shutdown your PC and clean the Recycle Bin (available in ctrl_appC version).
@@ -72,7 +72,7 @@ After downloading, you'll find two folders: `ctrl_app` and `ctrl_appC`.
 Select the folder based on the functionality you need, and place it somewhere on your computer that is not encrypted by BitLocker (to ensure it can run at startup).
 
 ### 3. Install Dependencies:
-Inside the folder, you.ll find a `requirements.txt` file. Install the requirements.txt file(If you dont know how, visit the Help section down below.)
+Inside the folder, you.ll find a `requirements.txt` file. Install the requirements.txt file<br>(If you dont know how, visit the ***Help*** section down below.)
 
 
 ### 4. Set Up Auto-Start:
@@ -82,7 +82,7 @@ Inside the folder, you.ll find a `requirements.txt` file. Install the requiremen
   
   - For **ctrl_appC**, use `triggerC.pyw`.
 
-- Move the shortcut to your **Startup** folder so the program runs automatically after boot. <br>(If you dont know how to get to the startup folder, visit the Help section down below.)
+- Move the shortcut to your **Startup** folder so the program runs automatically after boot. <br>(If you dont know how to get to the startup folder, visit the ***Help*** section down below.)
 
 
 
